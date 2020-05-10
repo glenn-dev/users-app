@@ -1,0 +1,70 @@
+<!-- MODAL -->
+<div class="modal fade" id="userDetailModal" tabindex="-1" role="dialog" aria-labelledby="userDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="userDetailModalLabel">{{user.name.title}} {{user.name.last}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <!-- CARD -->
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="{{user.picture.large}}" class="card-img" alt="{{user.name.title}} {{user.name.last}}}">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">
+                  {{user.name.first}} {{user.name.last}} 
+                </h5>
+                <ul class="list-group list-group-flush">
+                  <li *ngIf="user.id.value" class="list-group-item">
+                    <i class="fas fa-id-card"></i> · {{user.id.value}}
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-mobile-alt"></i> · {{user.cell}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <i class="fas fa-envelope"></i> · {{user.email}}
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-phone"></i> · {{user.phone}}
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-birthday-cake"></i> · 
+                  {{user.dob.date | date: 'MMM dd, yyyy'}} ({{user.dob.age}} años)
+                </li>
+                <li class="list-group-item">
+                  <i class="fas fa-map-marker-alt"></i> ·
+                  {{user.location.street.name}}
+                  {{user.location.street.number}}, 
+                  {{user.location.city}},
+                  {{user.location.state}},
+                  {{user.location.country}}
+                </li>
+              </ul>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>  
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')">Cerrar</button>
+        <button type="button" class="btn btn-primary">Contacta a {{user.name.first}}!</button>
+      </div>
+    </div>
+  </div>
+</div>
