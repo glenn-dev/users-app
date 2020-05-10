@@ -11,7 +11,7 @@ export class UserService {
   constructor(private banana: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.banana.get('https://randomuser.me/api/?results=10').pipe(
+    return this.banana.get('https://randomuser.me/api/?results=10&exc=login').pipe(
       catchError(this.handleError)
     );
   }
@@ -29,7 +29,8 @@ export class UserService {
     }
     // return an observable with a user-facing error message
     return throwError(
-      'Something bad happened; please try again later.');
+      'Something bad happened; please try again later.'
+    );
   };
 
 }

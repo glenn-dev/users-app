@@ -6,13 +6,21 @@ import { User } from '../../interfaces/users';
   selector: 'app-users',
   templateUrl: './users.component.html'
 })
+
 export class UsersComponent implements OnInit {
+
   users: User
+
+  showUser(user){
+    console.log(user);
+  };
+
   constructor(private userServices: UserService) { }
 
   ngOnInit(){
     this.userServices.getUsers().subscribe(response => {
       this.users = response.results;
+      // console.log(this.users.length);
     });
-  }
-}
+  };
+};

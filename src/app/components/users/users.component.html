@@ -1,5 +1,80 @@
-<h1>Love u Mei</h1>
+<h1>...</h1>
 
 <ul>
-  <li *ngFor="let user of users">{{user.gender}}</li>
+  <li *ngFor="let user of users">{{user.name.first}}</li>
 </ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th class="text-center" scope="col"><i class="fas fa-camera"></i></th>
+            <th class="text-center" scope="col">Nombre</th>
+            <th class="text-center" scope="col">Apellido</th>
+            <th class="text-center" scope="col">Edad</th>
+            <th class="text-center" scope="col">Genero</th>
+            <th class="text-center" scope="col">Ubicación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr 
+            class="text-center align-middle" 
+            *ngFor="let user of users" 
+            id="
+              {{user.id.value}} 
+              {{user.location.coordinates.latitude}} 
+              {{user.location.coordinates.longitude}}" 
+            (click)="showUser(user);"
+            data-toggle="modal" 
+            data-target="#userDetailModal">
+            <td class="text-center"><img src="{{user.picture.thumbnail}}" class="img-fluid img-thumbnail" alt="{{user.name.title}} {{user.name.first}}"></td>
+            <td class="align-middle">{{user.name.first}}</td>
+            <td class="align-middle">{{user.name.last}}</td>
+            <td class="align-middle">{{user.dob.age}}</td>
+            <td class="align-middle" *ngIf="user.gender  == 'female'"><i class="fas fa-venus"></i></td>
+            <td class="align-middle" *ngIf="user.gender == 'male'"><i class="fas fa-mars"></i></td>
+            <td class="align-middle">{{user.location.city}}, {{user.location.country}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="userDetailModal" tabindex="-1" role="dialog" aria-labelledby="userDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="userDetailModalLabel">HHH</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <!-- CARD -->
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="..." class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
