@@ -14,8 +14,6 @@ export class UsersComponent implements OnInit {
   users: User
 
   showUser(user){
-    console.log(user);
-
     const modalRef = this.modalService.open(ModalComponent);
     modalRef.componentInstance.user = user;
   };
@@ -29,7 +27,6 @@ export class UsersComponent implements OnInit {
   ngOnInit(){
     this.userServices.getUsers().subscribe(response => {
       this.users = response.results;
-      // console.log(this.users.length);
     });
   };
 };
