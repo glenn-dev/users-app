@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## :octocat: Contributing
 
-:construction: This is an open source project that still in development phase :baby:. We suggest you check "development" branch for latest features before any other action.
+:construction: This is an open source project that still in development phase :baby:. I strongly suggest you check "development" branch for latest features.
 
 :wrench: For major changes, please open an issue first to discuss what you would like to change. Feel free to contribute any suggestion as well.
 
