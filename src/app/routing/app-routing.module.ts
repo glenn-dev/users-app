@@ -10,7 +10,7 @@ import { AuthGuard } from "../guards/auth.guard";
 import { VerifyEmailComponent } from '../components/auth/verify-email/verify-email.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: '', redirectTo: '/users', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
