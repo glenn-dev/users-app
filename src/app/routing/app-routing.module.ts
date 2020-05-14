@@ -8,10 +8,11 @@ import { UsersComponent } from '../components/users/users.component';
 import { ForgotPasswordComponent } from '../components/auth/forgot-password/forgot-password.component';
 import { AuthGuard } from "../guards/auth.guard";
 import { VerifyEmailComponent } from '../components/auth/verify-email/verify-email.component';
+import { SecureInnerPagesGuard } from '../guards/secure-inner-pages.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/users', pathMatch: 'full' },
-  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'register-user', component: SignUpComponent },
   { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent },
