@@ -17,8 +17,8 @@ export class SecureInnerPagesGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if(this.authService.isLoggedIn) {
-      window.alert("Ya has iniciado sesión, cierra tu actual sesion para ingresar otra cuenta.");
-       this.router.navigate(['users'])
+      window.alert("You're already signed in. Please sign out first to enter with a new account.");
+      this.router.navigate(['users'])
     }
     return true;
   }

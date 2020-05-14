@@ -59,7 +59,7 @@ export class AuthService {
       })
   }
 
-  // Send email verfificaiton when new user sign up
+  // Send email verification when new user sign up
   SendVerificationMail() {
     return this.afAuth.currentUser.then(u => u.sendEmailVerification())
     .then(() => {
@@ -67,17 +67,17 @@ export class AuthService {
     })
   }
 
-  // Reset Forggot password
+  // Reset Forgot password
   ForgotPassword(passwordResetEmail) {
     return this.afAuth.sendPasswordResetEmail(passwordResetEmail)
     .then(() => {
-      window.alert('Password reset email sent, check your inbox.');
+      window.alert('We have sent you an email. Check your inbox and follow steps for password recovery.');
     }).catch((error) => {
       window.alert(error)
     })
   }
 
-  // Returns true when user is looged in and email is verified
+  // Returns true when user is logged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
     return (user !== null && user.emailVerified !== false) ? true : false;
