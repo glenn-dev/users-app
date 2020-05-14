@@ -7,7 +7,7 @@
             <th class="text-center d-none d-md-table-cell" scope="col"><i class="fas fa-camera"></i></th>
             <th class="text-center" scope="col">Nombre</th>
             <th class="text-center" scope="col">Apellido</th>
-            <th class="text-center" scope="col">Edad</th>
+            <th class="text-center d-none d-sm-table-cell" scope="col">Edad</th>
             <th class="text-center" scope="col">Genero</th>
             <th class="text-center d-none d-md-table-cell" scope="col">Ubicación</th>
           </tr>
@@ -23,10 +23,12 @@
             (click)="showUser(user);"
             data-toggle="modal" 
             data-target="#userDetailModal">
-            <td class="text-center d-none d-md-table-cell"><img src="{{user.picture.thumbnail}}" class="img-fluid img-thumbnail" alt="{{user.name.title}} {{user.name.first}}"></td>
+            <td class="text-center d-none d-md-table-cell">
+              <img src="{{user.picture.thumbnail}}" class="img-fluid img-thumbnail" alt="{{user.name.title}} {{user.name.first}}">
+            </td>
             <td class="align-middle">{{user.name.first}}</td>
             <td class="align-middle">{{user.name.last}}</td>
-            <td class="align-middle">{{user.dob.age}}</td>
+            <td class="align-middle d-none d-sm-table-cell">{{user.dob.age}}</td>
             <td class="align-middle" *ngIf="user.gender  == 'female'"><i class="fas fa-venus"></i></td>
             <td class="align-middle" *ngIf="user.gender == 'male'"><i class="fas fa-mars"></i></td>
             <td class="align-middle d-none d-md-table-cell">{{user.location.city}}, {{user.location.country}}</td>
