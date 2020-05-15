@@ -1,24 +1,44 @@
 # UsersApp
 
-The app allows visitors to sign-up. Then, it shows a list of random users provided by `https://randomuser.me/` API. Clicking on each one activate a modal with detailed personal (fake) information. The purpose of this application is to be familiarized with Angular framework in combination with cloud services.
+The app allows visitors to Sign-Up/Sign-In with email and password or with google auth service. Then, it shows a list of random users provided by [RANDOM USER GENERATOR](https://randomuser.me/) API. Clicking on each user activate a modal with detailed personal (fake) information. The purpose of this application is to be familiarized with Angular framework in combination with Firebase cloud services.
 
 ## :dart: Technologies:
 
-* Angular 9.1.4
+* Angular 9.1
 
-* Firebase Auth
+* RxJS 6.5
 
-* Bootstrap 4
+* jQuery 3.5
 
-## :earth_americas: Deployed
+* Bootstrap 4.4
+
+* Popper.js 1.16
+
+* Firebase 7.14
+
+* Typescript 3.8
+
+## :cloud: Cloud Services:
+
+* Firebase Authentication
+
+* Firebase Hosting
+
+## :earth_americas: Deployed at:
 
 :link: [users-app](https://users-app-276807.web.app/)
 
-## :clapper: :briefcase: Development server
+## :clapper: Running app on local server:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Execute the following commands on the root folder of the app:**
 
-## :hammer: :rocket: Build
+1. `$ npm install` to install *package.json* dependencies.
+
+2. `$ ng serve` for a dev local server.
+
+3. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## :hammer: Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
