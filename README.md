@@ -26,13 +26,10 @@ The app allows visitors to Sign-Up/Sign-In with email and password or with googl
 
 * Firebase Hosting
 
-
-## :earth_americas:  Deployed at:
-
-* [users-app](https://users-app-276807.web.app/)
+:earth_americas: [users-app](https://users-app-276807.web.app/)
 
 
-## :clapper:  Running app on local server:
+## :house:  Running app on local server:
 
 **Execute commands on the root folder of the app:**
 
