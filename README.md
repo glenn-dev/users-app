@@ -1,4 +1,4 @@
-# UsersApp
+# [UsersApp](https://users-app-276807.web.app/)
 
 The app allows visitors to Sign-Up/Sign-In with email and password or with google auth service. Then, it shows a list of random users provided by [Random User Generator](https://randomuser.me/) API. Clicking on each user activate a modal with detailed personal (fake) information. The purpose of this application is to be familiarized with Angular framework in combination with Firebase cloud services.
 
@@ -26,10 +26,10 @@ The app allows visitors to Sign-Up/Sign-In with email and password or with googl
 
 * Firebase Hosting
 
-:earth_americas: [users-app](https://users-app-276807.web.app/)
+* :earth_americas: [users-app](https://users-app-276807.web.app/)
 
 
-## :house:  Running app on local server:
+## :house:  Run app on local server:
 
 **Execute commands on the root folder of the app:**
 
